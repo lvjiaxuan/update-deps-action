@@ -10,11 +10,14 @@ function main() {
 
   const gitStatus = execSync('git status').toString()
   if (!gitStatus.includes('working tree clean')) {
+    core.info('Find new dependency(ies).')
     execSync(`git config user.name ${ github.context.actor }`)
     execSync(`git config user.email ${ email } }`)
     execSync('git add .')
     execSync('git commit -m "chore: update dependency."')
     execSync('git push')
+  } else {
+    core.info('Everything is up to date.')
   }
 }
 
