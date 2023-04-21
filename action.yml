@@ -1,0 +1,20 @@
+# https://docs.github.com/zh/actions/creating-actions/metadata-syntax-for-github-actions
+name: Update Dependency
+description: Update dependency version of package.json
+author: lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)
+inputs:
+  tool:
+    description: Either `ncu` or `taze` to update.
+    required: false
+    default: ncu
+  email:
+    description: The user.email to git.
+    required: true
+
+runs:
+  using: node16
+  main: dist/index.cjs
+
+branding:
+  icon: thumbs-up
+  color: green
