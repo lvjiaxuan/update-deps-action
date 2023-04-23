@@ -10,7 +10,7 @@ function main() {
 
   const gitStatus = execSync('git status').toString()
   if (!gitStatus.includes('working tree clean')) {
-    core.info('Find new dependency(ies).')
+    core.info('Find new dependency(ies).\n')
     execSync('corepack enable')
     execSync('npm i @antfu/ni -g')
     execSync('ni --lockfile-only --frozen-lockfile=false')
@@ -20,7 +20,7 @@ function main() {
     execSync('git commit -m "chore: update dependency."')
     execSync('git push')
   } else {
-    core.info('Everything is up to date.')
+    core.info('Everything is up to date.\n')
   }
 }
 
