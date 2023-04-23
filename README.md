@@ -1,1 +1,1 @@
-[yml](.github\workflows\up-dep.yml)
+[yml](./.github/workflows/up-dep.yml)

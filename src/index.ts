@@ -11,6 +11,9 @@ function main() {
   const gitStatus = execSync('git status').toString()
   if (!gitStatus.includes('working tree clean')) {
     core.info('Find new dependency(ies).')
+    execSync('corepack enable')
+    execSync('npm i @antfu/ni -g')
+    execSync('ni --lockfile-only --frozen-lockfile=false')
     execSync(`git config user.name ${ github.context.actor }`)
     execSync(`git config user.email ${ email } }`)
     execSync('git add .')
