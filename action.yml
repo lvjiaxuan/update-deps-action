@@ -4,7 +4,7 @@ description: Update dependency version of package.json
 author: lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)
 inputs:
   tool:
-    description: Either `ncu` or `taze` to update.
+    description: Use either `ncu` or `taze` to update.
     required: false
     default: ncu
   email:
