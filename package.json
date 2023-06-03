@@ -22,8 +22,8 @@
     "@actions/github": "^5.1.1",
     "@lvjiaxuan/eslint-plugin": "^0.15.0",
     "@types/node": "^20.2.5",
-    "eslint": "^8.41.0",
+    "eslint": "^8.42.0",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   }
 }
