@@ -1,7 +1,7 @@
 {
   "name": "update-dependency-action",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "",
   "author": "lvjiaxuan <471501748@qq.com> (https://github.com/lvjiaxuan)",
@@ -10,12 +10,16 @@
     "type": "git",
     "url": "https://github.com/lvjiaxuan/update-dependency-action"
   },
-  "keywords": ["github action", "workflows", "dependency"],
+  "keywords": [
+    "github action",
+    "workflows",
+    "dependency"
+  ],
   "main": "./dist/index.cjs",
   "scripts": {
     "build": "tsup src/index.ts --clean",
     "lint": "eslint .",
-    "release": "lvr --no-push"
+    "release": "nr build && lvr --no-push"
   },
   "devDependencies": {
     "@actions/core": "^1.10.0",
